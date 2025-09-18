@@ -1,1 +1,0 @@
-`{{ run(cat ../flag.txt) }}`

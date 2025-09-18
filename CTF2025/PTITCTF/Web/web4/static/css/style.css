@@ -1,0 +1,202 @@
+:root {
+    --background-gradient: linear-gradient(135deg, #000428, #004e92);
+    --form-bg-color: rgba(255, 255, 255, 0.13);
+    --form-border-color: rgba(255, 255, 255, 0.1);
+    --box-shadow-color: rgba(8, 7, 16, 0.6);
+    --input-bg-color: rgba(255, 255, 255, 0.07);
+    --placeholder-color: #000000;
+    --button-bg-color: #000000;
+    --button-text-color: #ffffff;
+    --social-bg-color: rgba(255, 255, 255, 0.27);
+    --social-hover-bg-color: rgba(255, 255, 255, 0.47);
+    --error-bg-color: #FFCCCB;
+    --error-text-color: black;
+    --font-family: 'Poppins', sans-serif;
+    --text-color: #000000;
+    --border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/bmw.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.background {
+    width: 100%;
+    max-width: 430px;
+    height: 520px;
+    position: relative;
+}
+
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    left: -80px;
+    top: -80px;
+}
+
+.shape:last-child {
+    right: -30px;
+    bottom: -80px;
+}
+
+form {
+    height: 100%;
+    max-height: 720px;
+    width: 100%;
+    max-width: 450px;
+    background-color: var(--form-bg-color);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--form-border-color);
+    box-shadow: 0 0 40px var(--box-shadow-color);
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form * {
+    font-family: inherit;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: var(--input-bg-color);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: 300;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--button-bg-color);
+}
+
+::placeholder {
+    color: var(--placeholder-color);
+}
+
+button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-bg-color);
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.social div {
+    width: 48%;
+    border-radius: 3px;
+    padding: 10px;
+    background-color: var(--social-bg-color);
+    color: #eaf0fb;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.social div:hover {
+    background-color: var(--social-hover-bg-color);
+}
+
+.social .fb {
+    margin-left: 0;
+}
+
+.social i {
+    margin-right: 8px;
+}
+
+.error_message {
+    color: var(--error-text-color);
+    background-color: var(--error-bg-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    border: 1px solid white;
+}
+
+@media (max-width: 480px) {
+    .background {
+        width: 90%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+.white-text {
+    color: white;
+}

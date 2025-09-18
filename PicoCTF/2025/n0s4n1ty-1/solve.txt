@@ -1,0 +1,5 @@
+//File upload
+
+whoami 
+sudo ls /root
+sudo cat /root/flag.txt

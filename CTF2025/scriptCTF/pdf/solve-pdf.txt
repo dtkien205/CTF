@@ -1,0 +1,17 @@
+tools: 
+sudo apt-get install qpdf poppler-utils exiftool
+pip install pdf-parser
+
+qpdf: để bung các object stream.
+pdf-parser.py (Didier Stevens): phân tích PDF.
+
+strings challenge.pdf | grep -i "CTF" -> scriptCTF{this_is_def_the_flag_trust}
+
+qpdf --qdf --object-streams=disable challenge.pdf unpacked.pdf
+
+python3 - <<'PY'
+import zlib
+data = open("obj1.raw","rb").read()
+print(zlib.decompress(data).decode("latin-1","replace"))
+PY
+

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py migrate &&
+         python manage.py collectstatic --noinput &&
+         python manage.py seed &&
+         gunicorn --bind 0.0.0.0:8000 MegaGameCorp.wsgi:application"
+
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8001:8000"
+    environment:
+      - DEBUG=0

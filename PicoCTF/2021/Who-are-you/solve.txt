@@ -1,0 +1,6 @@
+User-Agent: PicoBrowser
+Referer: mercury.picoctf.net:39114
+Date: 2018
+DNT: 1
+X-Forwarded-For: 2.18.199.255
+Accept-Language: en-US,en,sv;q=0.5

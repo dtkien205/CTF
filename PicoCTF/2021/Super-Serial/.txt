@@ -1,0 +1,3 @@
+<!-- $perm = unserialize(base64_decode(urldecode($_COOKIE["login"])));
+unserialize -> base64_decode -> urldecode
+urlencode -> base64_encode -> serialize -->

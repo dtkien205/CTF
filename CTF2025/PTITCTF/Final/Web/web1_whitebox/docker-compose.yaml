@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  web5:
+    ports:
+      - 5005:80
+    build:
+      context: ./src
+      dockerfile: dockerfile
+    depends_on:
+      - db
+    environment:
+      MYSQL_HOST: db
+      MYSQL_DATABASE: ctf_db
+      MYSQL_USER: ctf_user
+      MYSQL_PASSWORD: ctf_password
+    restart: always
+
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: ctf_db
+      MYSQL_USER: ctf_user
+      MYSQL_PASSWORD: ctf_password
+    volumes:
+      - ./src/init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -1,0 +1,22 @@
+FROM php:7.4.33-apache
+
+COPY src.zip /tmp
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
+# RUN apt-get update && apt-get install libmariadb-dev -y && apt install zip unzip -y && apt install wkhtmltopdf -y
+RUN apt-get update && apt-get install -y libmariadb-dev zip unzip wkhtmltopdf
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+RUN a2enmod rewrite
+
+RUN unzip /tmp/src.zip -d /var/www/
+WORKDIR /var/www
+RUN rm -rf html
+RUN mv src html
+RUN chmod 777 /usr/bin/wkhtmltopdf
+RUN chown -R www-data:www-data html
+RUN chmod 777 /var/www/html/uploads
+
+RUN echo "PTITCTF{fake_flag}" > /flag_$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10).txt
+
+USER www-data
+EXPOSE 80

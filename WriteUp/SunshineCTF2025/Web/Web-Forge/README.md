@@ -6,7 +6,7 @@ NOTE FROM ADMINS: Use of automated fuzzing tools are allowed for this challenge.
 ```
 
 
-Truy cập vào `/admin`:
+Truy cập vào `/fetch`:
 ```
 403 Forbidden: missing or incorrect SSRF access header
 ```
